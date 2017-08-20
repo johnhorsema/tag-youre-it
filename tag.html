@@ -12,7 +12,8 @@
 		<div class="spinner" ng-show="ctrl.azured==true && !ctrl.azure.tags"></div>
 		<h2 ng-show="ctrl.azure.tags">Suggested tags:</h2>
 		<h2 class="btn btn-md btn-info" style="margin: 1rem; font-size: 2rem;" ng-repeat="a in ctrl.azure.tags">{{ a }}</h2>
-		<div ng-show="ctrl.azure_colors">{{ ctrl.azure_colors }}</div>
+
+		<div ng-repeat="c in ctrl.azure_colors" ng-style="display: inline-block; border-radius: 5rem; width: 20px; height: 20px; background-color: {{ c }}"></div>
 	</div>
 </div>  
 
