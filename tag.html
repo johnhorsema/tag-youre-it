@@ -1,12 +1,17 @@
 
 
 <div class="row">
-	<div class="col-md-12" style="text-align: center">
+	<div class="col-sm-6" style="text-align: center">
 		<h1 id="title_demo" style="color: #fff;"> Upload Picture </h1>
 		<div class="uploader">
-			<img id="uploaded" style="display: none" src=""/>
-			<input type="file" name="userprofile_picture" id="filePhoto" style="margin-left: 45%">
+			<img id="uploaded" style="width: 300px;" ng-src="{{ctrl.img_data}}"/>
+			<input type="file" name="userprofile_picture" id="filePhoto" custom-on-change="ctrl.handleImage" style="margin-left: 45%">
 		</div>
+	</div>
+	<div class="col-sm-6 well" style="margin-top: 6rem;">
+		<div class="spinner" ng-show="ctrl.azured==true && !ctrl.azure.tags"></div>
+		<h2 ng-show="ctrl.azure.tags">Suggested tags:</h2>
+		<h2 class="btn btn-md btn-info" style="margin: 1rem; font-size: 2rem;" ng-repeat="a in ctrl.azure.tags">{{ a }}</h2>
 	</div>
 </div>  
 
@@ -37,5 +42,3 @@
 
 <link href="//fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 <link rel="stylesheet" href="css/tag.css">
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
