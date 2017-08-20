@@ -1,0 +1,24 @@
+<div>
+  <div class="row text-center">
+      <h2 class="jarvis-text">INSPIRE</h2>
+      <div class="jarvis-container">
+          <div class="jarvis pulse">
+          	<svg xmlns="http://www.w3.org/2000/svg" id="content" viewBox="0 0 144 144"><title>ic_icons_144px_light</title><circle cx="72" cy="72" r="72" fill="#FFE4C4"/><rect width="144" height="144" transform="translate(144 144) rotate(180)" fill="none"/><circle cx="72" cy="72" r="48" fill="floralwhite"/><circle cx="72" cy="72" r="24" fill="#fff"/><head/></svg>
+          </div>
+      </div>
+  </div>
+
+  <div class="row">
+     <div class="row query-result">
+        <div class="container">
+          <input class="navbar-input col-xs-11" type="" placeholder="Type keywords to search" name="query" ng-model="ctrl.query" ng-keyup="$event.keyCode == 13 && ctrl.submitQuery()">
+          <button class="navbar-button col-xs-1" ng-click="ctrl.submitQuery()">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </div>
+    </div>
+  </div>
+</div>
+
+<link href="//fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+<link rel="stylesheet" href="css/search.css">

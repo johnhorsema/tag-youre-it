@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="myApp">
+    <meta charset="UTF-8">
+    <base href="/">
+    <head>
+        <title ng-bind="'INSPIRE - '+title">INSPIRE</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="https://bootswatch.com/lumen/bootstrap.min.css" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">INSPIRE</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li><a href="/recognition">Recognition</a></li>
+            <li><a href="/tag">Smart Tags</a></li>
+            <li><a href="/dash">Dashboard</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/chez8990/fung_prob1" target="_blank">Github</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+        <div class="container" ng-view></div>
+    </body>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.min.js"></script>
+    <script type='text/javascript' src="app.js" charset="UTF-8"></script>
+
+</html>

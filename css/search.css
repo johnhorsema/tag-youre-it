@@ -1,0 +1,135 @@
+body { padding-top: 100px; background: #4e4e4e ; font-family: 'Poiret One', cursive; }
+
+.text-center {
+	text-align: center;
+}
+.navbar-input {
+	padding: 11px 16px;
+	border-radius: 2px 0 0 2px;
+	border: 0 none;
+	outline: 0 none;
+	font-size: 15px;
+	box-shadow: 1px 1px 5px #a1a1a1;
+}
+
+.navbar-input:focus {
+	box-shadow: 1px 1px 15px #b9b9b9;
+}
+
+.navbar-button {
+	background-color: #FFE4C4;
+	border: 1px solid #FFE4C4;
+	border-radius: 0 2px 2px 0;
+	color: #4e4e4e;
+	padding: 10px 0;
+	height: 43px;
+	cursor: pointer;
+	outline: none;
+}
+
+.navbar-button:focus {
+	background-color: #3bb3e8;
+	border-color: #3bb3e8;
+}
+
+.navbar-button:disabled {
+	border: transparent;
+	background-color: #cccccc;
+	color: #dddddd;
+}
+
+.jarvis-container {
+	margin: 0;
+	width: 100%;
+	position: relative;
+	height: 125px;
+	top: 0;
+	text-align: center;
+}
+
+.jarvis {
+	width: 100%;
+	z-index: 9999;
+}
+
+.jarvis svg {
+	height: 125px;
+}
+
+.jarvis.pulse {
+    animation-name: pulse_animation;
+    animation-duration: 1800ms;
+    transform-origin: 50% 50%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes pulse_animation {
+	0% { transform: scale(1); }
+	30% { transform: scale(1); }
+	40% { transform: scale(1); }
+	50% { transform: scale(1.08); }
+	60% { transform: scale(1.05); }
+	70% { transform: scale(1.02); }
+	80% { transform: scale(1); }
+	100% { transform: scale(1); }
+}
+
+.jarvis-text {
+	font-family: 'Poiret One', cursive;
+	color: #FFE4C4;
+}
+
+.admin-area {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+}
+
+.st-scroll {
+	top: 0;
+	left: 0;
+	transition: all 0.6s ease-in-out;
+
+	/* Let's enforce some hardware acceleration */
+	-webkit-transform: translate3d(0, 0, 0);
+	-webkit-backface-visibility: hidden;
+}
+
+.st-scroll-apply {
+	transform: translateY(-400px);
+}
+
+.back-button {
+	position: fixed;
+	left: 43%;
+}
+
+.cite {
+	color: #006621;
+	font-size: 14px;
+}
+
+table a{
+	color: rgb(41, 121, 255)
+}
+
+table a.title{
+	font-size: 18px;
+}
+
+table a:visited{
+	color: #609;
+}
+
+.score-col{
+	margin-right: 20px;
+}
+
+.result-msg {
+	color: #808080;
+}
+
+.query-result {
+	padding-top: 2em;
+}

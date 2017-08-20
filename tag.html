@@ -1,0 +1,41 @@
+
+
+<div class="row">
+	<div class="col-md-12" style="text-align: center">
+		<h1 id="title_demo" style="color: #fff;"> Upload Picture </h1>
+		<div class="uploader">
+			<img id="uploaded" style="display: none" src=""/>
+			<input type="file" name="userprofile_picture" id="filePhoto" style="margin-left: 45%">
+		</div>
+	</div>
+</div>  
+
+
+
+<div class="row">
+    <form>
+    	<div class="form-group col-md-12">
+	        <label for="d1">#</label>
+	        <input id="tagbar" type="text" name="d1" ng-model="ctrl.d1" placeholder="Tag your picture" ng-keypress="ctrl.appendTag($event)">
+	        <button class="btn btn-block btn-info"><i class="glyphicon glyphicon-send"></i></button>
+        </div>
+    </form>
+</div>
+
+<div class="row" ng-show="ctrl.inputtedTags">
+	<span class="btn btn-sm btn-info" ng-repeat="a in ctrl.inputtedTags">{{ a }}</span>
+</div>
+
+<div class="row well" ng-show="ctrl.displayTags.length>0">
+	<div class="col-md-4"></div>
+	<div class="col-md-4">
+		<h2 ng-repeat="b in ctrl.displayTags">
+			<strong>{{ b[0] }}</strong> <span>{{ b[1] }}</span>
+		</h2>
+	</div>
+</div>
+
+<link href="//fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+<link rel="stylesheet" href="css/tag.css">
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
