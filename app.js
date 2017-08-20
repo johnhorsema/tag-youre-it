@@ -164,7 +164,7 @@ function feat_extract(jsonformat){
   //This is specific to ms azure
   var tags = jsonformat['description']['tags'];
   var verbal_description = jsonformat['description']['captions'];
-  var colors = jsonformat['color']['dominantColors'];
+  var colors = jsonformat['color'];
 
 
     var ind = tags.indexOf('indoor')
@@ -202,7 +202,8 @@ function img_post(raw_data) {
       data: raw_data
     }).then(function successCallback(response) {
       self.azure = json_parser(response.data);
-      self.azure_colors = self.azure['dominant colors'];
+      // console.log(self.azure['dominant colors'])
+      self.azure_colors = ['#'+self.azure['dominant colors']['accentColor']];
       console.log(self.azure);
     });
   

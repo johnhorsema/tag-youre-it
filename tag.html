@@ -13,7 +13,8 @@
 		<h2 ng-show="ctrl.azure.tags">Suggested tags:</h2>
 		<h2 class="btn btn-md btn-info" style="margin: 1rem; font-size: 2rem;" ng-repeat="a in ctrl.azure.tags">{{ a }}</h2>
 
-		<div ng-repeat="c in ctrl.azure_colors" ng-style="display: inline-block; border-radius: 5rem; width: 20px; height: 20px; background-color: {{ c }}"></div>
+		<br />
+		<span ng-repeat="c in ctrl.azure_colors" style="display: inline-block; border-radius: 5rem; width: 40px; height: 40px; background-color: {{ c }};"></span>
 	</div>
 </div>  
 
