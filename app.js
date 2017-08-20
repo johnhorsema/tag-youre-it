@@ -32,23 +32,20 @@ angular.module('myApp', [
 	$locationProvider.html5Mode(true);
 })
 .controller('HomeCtrl', function($scope, $route, $routeParams, $location, $http) {
-  this.query = '';
-  this.queryProcessed = false;
+  // this.query = '';
+  // this.queryProcessed = false;
 
-  this.resetSearch = function() {
-    this.queryProcessed = false;
-    this.queryResults = null;
-    this.query = "";
-    this.timeElapsed = 0;
-  }
-
+  // this.resetSearch = function() {
+  //   this.queryProcessed = false;
+  //   this.queryResults = null;
+  //   this.query = "";
+  //   this.timeElapsed = 0;
+  // }
+  var self = this;
   this.submitQuery = function() {
-    if(this.query==""){
-      return;
-    }
-    this.queryProcessed = true;
-    this.queryResults = null;
+    self.search_done = true;
   }
+
 })
 .controller('RecogCtrl', function($scope, $route, $routeParams, $location, $http) {
   angular.element(document).ready(function () {

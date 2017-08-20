@@ -9,7 +9,7 @@
   </div>
 
   <div class="row">
-     <div class="row query-result">
+     <div class="row query-result" ng-hide="ctrl.search_done">
         <div class="container">
           <input class="navbar-input col-xs-11" type="" placeholder="Type keywords to search" name="query" ng-model="ctrl.query" ng-keyup="$event.keyCode == 13 && ctrl.submitQuery()">
           <button class="navbar-button col-xs-1" ng-click="ctrl.submitQuery()">
@@ -17,7 +17,18 @@
           </button>
         </div>
     </div>
+    <div class="row" ng-show="ctrl.search_done">
+      <img src="https://slack-imgs.com//mc?c=1&url=http%3A%2F%2Fi1.mirror.co.uk%2Fincoming%2Farticle6799154.ece%2FALTERNATES%2Fs615b%2FLightbulb-penguins-Christmas-decorations.jpg">
+      <h2>tags: #christmas #penguin</h2>
+      <br />
+      <img src="https://sc01.alicdn.com/kf/HTB1WqA5KFXXXXcTXXXXq6xXFXXXw/2016-Wholesale-Christmas-Stocking-for-Christmas-Decor.jpg">
+      <h2>tags: #xmas</h2>
+      <br />
+      <img src="http://decorationchannel.com/wp-content/uploads/2013/12/christmas-decorations-with-glittery.jpg">
+      <h2>tags: #jinglebell</h2>
+    </div>
   </div>
+
 </div>
 
 <link href="//fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
