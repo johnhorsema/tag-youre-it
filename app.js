@@ -6,9 +6,9 @@ angular.module('myApp', [
 ])
 .config(function($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider.when('/', {
-        templateUrl: 'dash.html',
-        controller: 'TagCtrl as ctrl',
-        title: 'Dashboard'
+        templateUrl: 'home.html',
+        controller: 'HomeCtrl as ctrl',
+        title: 'Home'
     })
     .when('/recognition', {
         templateUrl: 'recognition.html',
