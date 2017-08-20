@@ -6,9 +6,9 @@ angular.module('myApp', [
 ])
 .config(function($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider.when('/', {
-        templateUrl: 'home.html',
+        templateUrl: 'search.html',
         controller: 'HomeCtrl as ctrl',
-        title: 'Home'
+        title: 'Search Engine'
     })
     .when('/recognition', {
         templateUrl: 'recognition.html',
@@ -204,7 +204,7 @@ function img_post(raw_data) {
       self.azure = json_parser(response.data);
       // console.log(self.azure['dominant colors'])
       self.azure_colors = ['#'+self.azure['dominant colors']['accentColor']];
-      console.log(self.azure);
+      // console.log(self.azure);
     });
   
     // $.ajax({
