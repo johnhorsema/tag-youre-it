@@ -202,7 +202,7 @@ function img_post(raw_data) {
       data: raw_data
     }).then(function successCallback(response) {
       self.azure = json_parser(response.data);
-      self.azure_colors = response.data['dominant colors'].reduce(function(acc, a){
+      self.azure_colors = self.azure['dominant colors'].reduce(function(acc, a){
         return acc+generateCircle(a);
       },'')
       console.log(self.azure);
